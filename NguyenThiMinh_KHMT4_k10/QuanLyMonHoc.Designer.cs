@@ -44,13 +44,14 @@
             this.quanLyHocSinhDataSet2 = new NguyenThiMinh_KHMT4_k10.QuanLyHocSinhDataSet2();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hủyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnThem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSua = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnHuy = new System.Windows.Forms.ToolStripMenuItem();
             this.monHocTableAdapter = new NguyenThiMinh_KHMT4_k10.QuanLyHocSinhDataSet2TableAdapters.MonHocTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLuu = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monHocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyHocSinhDataSet2)).BeginInit();
@@ -117,7 +118,7 @@
             this.tenMonDataGridViewTextBoxColumn,
             this.soTietDataGridViewTextBoxColumn});
             this.dgvMonHoc.DataSource = this.monHocBindingSource;
-            this.dgvMonHoc.Location = new System.Drawing.Point(252, 143);
+            this.dgvMonHoc.Location = new System.Drawing.Point(327, 143);
             this.dgvMonHoc.Name = "dgvMonHoc";
             this.dgvMonHoc.Size = new System.Drawing.Size(341, 168);
             this.dgvMonHoc.TabIndex = 8;
@@ -162,7 +163,7 @@
             this.groupBox1.Controls.Add(this.txtbSoTiet);
             this.groupBox1.Location = new System.Drawing.Point(12, 33);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(205, 278);
+            this.groupBox1.Size = new System.Drawing.Size(262, 278);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             // 
@@ -170,61 +171,62 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thêmToolStripMenuItem,
-            this.sửaToolStripMenuItem,
-            this.xóaToolStripMenuItem,
-            this.xemToolStripMenuItem,
-            this.hủyToolStripMenuItem});
+            this.btnThem,
+            this.btnSua,
+            this.btnXoa,
+            this.btnXem,
+            this.btnHuy,
+            this.btnLuu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(624, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(723, 30);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // thêmToolStripMenuItem
+            // btnThem
             // 
-            this.thêmToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thêmToolStripMenuItem.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
-            this.thêmToolStripMenuItem.Text = "Thêm";
-            this.thêmToolStripMenuItem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
+            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(69, 26);
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
             // 
-            // sửaToolStripMenuItem
+            // btnSua
             // 
-            this.sửaToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sửaToolStripMenuItem.Margin = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
-            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(54, 26);
-            this.sửaToolStripMenuItem.Text = "Sửa";
-            this.sửaToolStripMenuItem.Click += new System.EventHandler(this.sửaToolStripMenuItem_Click);
+            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Margin = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(54, 26);
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.sửaToolStripMenuItem_Click);
             // 
-            // xóaToolStripMenuItem
+            // btnXoa
             // 
-            this.xóaToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xóaToolStripMenuItem.Margin = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
-            this.xóaToolStripMenuItem.Text = "Xóa";
-            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
+            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(55, 26);
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
-            // xemToolStripMenuItem
+            // btnXem
             // 
-            this.xemToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xemToolStripMenuItem.Margin = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.xemToolStripMenuItem.Name = "xemToolStripMenuItem";
-            this.xemToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
-            this.xemToolStripMenuItem.Text = "Xem";
-            this.xemToolStripMenuItem.Click += new System.EventHandler(this.xemToolStripMenuItem_Click);
+            this.btnXem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXem.Margin = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(59, 26);
+            this.btnXem.Text = "Xem";
+            this.btnXem.Click += new System.EventHandler(this.xemToolStripMenuItem_Click);
             // 
-            // hủyToolStripMenuItem
+            // btnHuy
             // 
-            this.hủyToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hủyToolStripMenuItem.Margin = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.hủyToolStripMenuItem.Name = "hủyToolStripMenuItem";
-            this.hủyToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
-            this.hủyToolStripMenuItem.Text = "Hủy";
-            this.hủyToolStripMenuItem.Click += new System.EventHandler(this.hủyToolStripMenuItem_Click);
+            this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(55, 26);
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.hủyToolStripMenuItem_Click);
             // 
             // monHocTableAdapter
             // 
@@ -233,19 +235,28 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(252, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(327, 33);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(341, 104);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(55, 26);
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.lưuToolStripMenuItem_Click);
+            // 
             // QuanLyMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(624, 311);
+            this.ClientSize = new System.Drawing.Size(723, 311);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvMonHoc);
@@ -278,11 +289,11 @@
         private System.Windows.Forms.DataGridView dgvMonHoc;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem thêmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sửaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hủyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnThem;
+        private System.Windows.Forms.ToolStripMenuItem btnSua;
+        private System.Windows.Forms.ToolStripMenuItem btnXoa;
+        private System.Windows.Forms.ToolStripMenuItem btnXem;
+        private System.Windows.Forms.ToolStripMenuItem btnHuy;
         private QuanLyHocSinhDataSet2 quanLyHocSinhDataSet2;
         private System.Windows.Forms.BindingSource monHocBindingSource;
         private QuanLyHocSinhDataSet2TableAdapters.MonHocTableAdapter monHocTableAdapter;
@@ -290,5 +301,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenMonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soTietDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem btnLuu;
     }
 }

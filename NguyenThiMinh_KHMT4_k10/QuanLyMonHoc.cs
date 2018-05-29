@@ -42,67 +42,31 @@ namespace NguyenThiMinh_KHMT4_k10
         }
 
       
-
+        
 
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                MonHocBUL mh = new MonHocBUL();
-                string MaMon = txtbMaMonHoc.Text;
-                string TenMon = txtbTenMon.Text;
-                int SoTiet = int.Parse(txtbSoTiet.Text);
-                mh.Them(MaMon, TenMon, SoTiet);
-                dgvMonHoc.DataSource = myMonHoc.LayDanhSachMonHoc();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Thêm mới không hợp lệ!!!");
-            }
+            btnThem.Enabled = false;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+            btnXem.Enabled = true;
+            
         }
 
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                MonHocBUL mh = new MonHocBUL();
-                string MaMon = txtbMaMonHoc.Text;
-                string TenMon = txtbTenMon.Text;
-                int SoTiet = int.Parse(txtbSoTiet.Text);
-                mh.Sua(MaMon, TenMon, SoTiet);
-                dgvMonHoc.DataSource = myMonHoc.LayDanhSachMonHoc();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Sửa thông tin  không hợp lệ!!!");
-            }
+            btnSua.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnXem.Enabled = true;
         }
 
         private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                MonHocBUL mh = new MonHocBUL();
-                string MaMon = txtbMaMonHoc.Text;
-                mh.Xoa(MaMon);
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Xóa thông tin  không hợp lệ!!!");
-            }
-            DialogResult dlr = MessageBox.Show("Thông báo xác nhận xóa",
-            "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.No)
-            {
-
-            }
-            if (dlr == DialogResult.Yes)
-            {
-
-                dgvMonHoc.DataSource = myMonHoc.LayDanhSachMonHoc();
-                ClearMonHoc();
-            }
+            btnXoa.Enabled = false;
+            btnSua.Enabled = true;
+            btnThem.Enabled = true;
+            btnXem.Enabled = true;
         }
 
         private void xemToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,6 +80,69 @@ namespace NguyenThiMinh_KHMT4_k10
             ClearMonHoc();
         }
 
-    
+        private void lưuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (btnThem.Enabled == false)
+            {
+                try
+                {
+                    MonHocBUL mh = new MonHocBUL();
+                    string MaMon = txtbMaMonHoc.Text;
+                    string TenMon = txtbTenMon.Text;
+                    int SoTiet = int.Parse(txtbSoTiet.Text);
+                    mh.Them(MaMon, TenMon, SoTiet);
+                    dgvMonHoc.DataSource = myMonHoc.LayDanhSachMonHoc();
+                    btnThem.Enabled = true;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Thêm mới không hợp lệ!!!");
+                }
+            }
+            if (btnSua.Enabled == false)
+            {
+                try
+                {
+                    MonHocBUL mh = new MonHocBUL();
+                    string MaMon = txtbMaMonHoc.Text;
+                    string TenMon = txtbTenMon.Text;
+                    int SoTiet = int.Parse(txtbSoTiet.Text);
+                    mh.Sua(MaMon, TenMon, SoTiet);
+                    dgvMonHoc.DataSource = myMonHoc.LayDanhSachMonHoc();
+                    btnSua.Enabled = true;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Sửa thông tin  không hợp lệ!!!");
+                }
+            }
+            if (btnXoa.Enabled == false)
+            {
+                try
+                {
+                    MonHocBUL mh = new MonHocBUL();
+                    string MaMon = txtbMaMonHoc.Text;
+                    mh.Xoa(MaMon);
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Xóa thông tin  không hợp lệ!!!");
+                }
+                DialogResult dlr = MessageBox.Show("Thông báo xác nhận xóa",
+                "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlr == DialogResult.No)
+                {
+
+                }
+                if (dlr == DialogResult.Yes)
+                {
+
+                    dgvMonHoc.DataSource = myMonHoc.LayDanhSachMonHoc();
+                    ClearMonHoc();
+                    btnXoa.Enabled = true;
+                }
+            }
+        }
     }
 }

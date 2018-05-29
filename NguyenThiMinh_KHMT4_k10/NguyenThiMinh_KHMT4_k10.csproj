@@ -109,6 +109,12 @@
     <Compile Include="QuanLyMonHoc.Designer.cs">
       <DependentUpon>QuanLyMonHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="XemDSLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemDSLop.Designer.cs">
+      <DependentUpon>XemDSLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="XemDSMonHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyMonHoc.resx">
       <DependentUpon>QuanLyMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemDSLop.resx">
+      <DependentUpon>XemDSLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XemDSMonHoc.resx">
       <DependentUpon>XemDSMonHoc.cs</DependentUpon>

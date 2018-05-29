@@ -40,5 +40,29 @@ namespace NguyenThiMinh_KHMT4_k10
         {
 
         }
+
+        private void toolStripMenuItem14_Click(object sender, EventArgs e)
+        {
+            HoSoHocSinh hoSoHocSinh = new HoSoHocSinh();
+            hoSoHocSinh.Show();
+        }
+
+        private void toolStripMenuItem15_Click(object sender, EventArgs e)
+        {
+            QuanLyMonHoc qlMonHoc = new QuanLyMonHoc();
+            qlMonHoc.Show();
+        }
+
+        private void toolStripMenuItem16_Click(object sender, EventArgs e)
+        {
+            Lop lop = new Lop();
+            lop.Show();
+        }
+
+        private void toolStripMenuItem17_Click(object sender, EventArgs e)
+        {
+            CanBoGiaoVien canBoGiaoVien = new CanBoGiaoVien();
+            canBoGiaoVien.Show();
+        }
     }
 }
