@@ -36,7 +36,6 @@
             this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnHuy = new System.Windows.Forms.ToolStripMenuItem();
-            this.lưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbGiaoVienChuNhiem = new System.Windows.Forms.ComboBox();
             this.txtbSiSo = new System.Windows.Forms.TextBox();
@@ -74,19 +73,18 @@
             this.btnSua,
             this.btnXoa,
             this.btnXem,
-            this.btnHuy,
-            this.lưuToolStripMenuItem});
+            this.btnHuy});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 2, 10, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(808, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(786, 30);
             this.menuStrip1.TabIndex = 0;
             // 
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Black;
-            this.btnThem.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(69, 26);
             this.btnThem.Text = "Thêm";
@@ -95,7 +93,7 @@
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Margin = new System.Windows.Forms.Padding(90, 0, 0, 0);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(100, 0, 0, 0);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(54, 26);
             this.btnSua.Text = "Sửa";
@@ -104,7 +102,7 @@
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(90, 0, 0, 0);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(100, 0, 0, 0);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(55, 26);
             this.btnXoa.Text = "Xóa";
@@ -113,7 +111,7 @@
             // btnXem
             // 
             this.btnXem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXem.Margin = new System.Windows.Forms.Padding(90, 0, 0, 0);
+            this.btnXem.Margin = new System.Windows.Forms.Padding(100, 0, 0, 0);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(59, 26);
             this.btnXem.Text = "Xem";
@@ -122,20 +120,11 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(90, 0, 0, 0);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(100, 0, 0, 0);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(55, 26);
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // lưuToolStripMenuItem
-            // 
-            this.lưuToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lưuToolStripMenuItem.Margin = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.lưuToolStripMenuItem.Name = "lưuToolStripMenuItem";
-            this.lưuToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
-            this.lưuToolStripMenuItem.Text = "Lưu";
-            this.lưuToolStripMenuItem.Click += new System.EventHandler(this.lưuToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -151,9 +140,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(8, 32);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Size = new System.Drawing.Size(197, 376);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -267,7 +256,6 @@
             this.dgvLop.Name = "dgvLop";
             this.dgvLop.Size = new System.Drawing.Size(572, 233);
             this.dgvLop.TabIndex = 2;
-            this.dgvLop.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLop_CellContentClick_1);
             // 
             // maLopDataGridViewTextBoxColumn
             // 
@@ -325,7 +313,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(808, 408);
+            this.ClientSize = new System.Drawing.Size(786, 408);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvLop);
             this.Controls.Add(this.groupBox1);
@@ -377,6 +365,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn siSoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaoVienChuNhiemDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem lưuToolStripMenuItem;
     }
 }

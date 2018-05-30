@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NguyenThiMinh_KHMT4_k10
 {
-    public partial class XemDSMonHoc : Form
+    public partial class FormGiaoVien : Form
     {
-        public XemDSMonHoc()
+        public FormGiaoVien()
         {
             InitializeComponent();
         }

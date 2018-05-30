@@ -24,45 +24,27 @@ namespace NguyenThiMinh_KHMT4_k10
         public int i = 10;
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-            lbtitle.Left += i;
-            if (lbtitle.Left >= this.Width - lbtitle.Width || lbtitle.Left <= 0)
-                i = -i;
+         
+            lbtitle.Location = new Point(lbtitle.Location.X -i, lbtitle.Location.Y);
+            if (lbtitle.Location.X <= 0 -lbtitle.Width|| lbtitle.Location.X > this.Width)
+            {
+                lbtitle.Location = new Point(lbtitle.Location.X +789+lbtitle.Width, lbtitle.Location.Y);
+            }
+           
 
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
         {
-            //timer1.Start();
+           // timer1.Start();
+            
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void toolStripMenuItem19_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void toolStripMenuItem14_Click(object sender, EventArgs e)
-        {
-            HoSoHocSinh hoSoHocSinh = new HoSoHocSinh();
-            hoSoHocSinh.Show();
-        }
-
-        private void toolStripMenuItem15_Click(object sender, EventArgs e)
-        {
-            QuanLyMonHoc qlMonHoc = new QuanLyMonHoc();
-            qlMonHoc.Show();
-        }
-
-        private void toolStripMenuItem16_Click(object sender, EventArgs e)
-        {
-            Lop lop = new Lop();
-            lop.Show();
-        }
-
-        private void toolStripMenuItem17_Click(object sender, EventArgs e)
-        {
-            CanBoGiaoVien canBoGiaoVien = new CanBoGiaoVien();
-            canBoGiaoVien.Show();
+            this.Hide();
+            PhanCongGiangDay phanCong = new PhanCongGiangDay();
+            phanCong.Show();
         }
     }
 }
