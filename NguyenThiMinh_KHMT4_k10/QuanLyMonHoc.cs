@@ -72,7 +72,9 @@ namespace NguyenThiMinh_KHMT4_k10
         private void xemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             XemDSMonHoc xemDS = new XemDSMonHoc();
-            xemDS.Show();
+             xemDS.Show();
+           
+
         }
 
         private void hủyToolStripMenuItem_Click(object sender, EventArgs e)

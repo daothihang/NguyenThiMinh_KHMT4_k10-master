@@ -36,6 +36,7 @@
             this.btnXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.btnXem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnHuy = new System.Windows.Forms.ToolStripMenuItem();
+            this.lưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbGiaoVienChuNhiem = new System.Windows.Forms.ComboBox();
             this.txtbSiSo = new System.Windows.Forms.TextBox();
@@ -56,7 +57,6 @@
             this.lopBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyHocSinhDataSet = new NguyenThiMinh_KHMT4_k10.QuanLyHocSinhDataSet();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLop)).BeginInit();
@@ -127,6 +127,15 @@
             this.btnHuy.Size = new System.Drawing.Size(55, 26);
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // lưuToolStripMenuItem
+            // 
+            this.lưuToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lưuToolStripMenuItem.Margin = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.lưuToolStripMenuItem.Name = "lưuToolStripMenuItem";
+            this.lưuToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.lưuToolStripMenuItem.Text = "Lưu";
+            this.lưuToolStripMenuItem.Click += new System.EventHandler(this.lưuToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -258,6 +267,7 @@
             this.dgvLop.Name = "dgvLop";
             this.dgvLop.Size = new System.Drawing.Size(572, 233);
             this.dgvLop.TabIndex = 2;
+            this.dgvLop.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLop_CellContentClick_1);
             // 
             // maLopDataGridViewTextBoxColumn
             // 
@@ -309,15 +319,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // lưuToolStripMenuItem
-            // 
-            this.lưuToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lưuToolStripMenuItem.Margin = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.lưuToolStripMenuItem.Name = "lưuToolStripMenuItem";
-            this.lưuToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
-            this.lưuToolStripMenuItem.Text = "Lưu";
-            this.lưuToolStripMenuItem.Click += new System.EventHandler(this.lưuToolStripMenuItem_Click);
             // 
             // Lop
             // 

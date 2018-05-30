@@ -152,5 +152,10 @@ namespace NguyenThiMinh_KHMT4_k10
                 }
             }
         }
+
+        private void dgvLop_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

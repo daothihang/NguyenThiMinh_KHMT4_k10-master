@@ -12,6 +12,8 @@ namespace BUL
     public class MonHocBUL
     {
         MonHocDAL myMonHoc = new MonHocDAL();
+       
+
         public List<MonHocDTO> LayDanhSachMonHoc()
         {
             return myMonHoc.LayBangMonHoc();
@@ -19,19 +21,15 @@ namespace BUL
         public bool Them( string MaMon, string TenMon, int SoTiet)
         {
             return myMonHoc.Them(MaMon, TenMon, SoTiet);
-
         }
         public bool Sua(string MaMon, string TenMon, int SoTiet)
         {
             return myMonHoc.Sua(MaMon, TenMon, SoTiet);
-
         }
         public bool Xoa(string MaMon)
         {
             return myMonHoc.Xoa(MaMon);
-
         }
-        
 
 
     }

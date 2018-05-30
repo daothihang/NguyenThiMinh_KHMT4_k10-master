@@ -32,7 +32,11 @@ namespace DAL
             KetNoiCoSoDuLieu.DongKetNoi();
             return dsmh;
         }
-        public bool Them( string MaMon, string TenMon, int SoTiet)
+
+
+
+
+        public bool Them(string MaMon, string TenMon, int SoTiet)
         {
             try
             {
@@ -102,6 +106,7 @@ namespace DAL
             }
             return false;
         }
-       
+
+      
     }
 }

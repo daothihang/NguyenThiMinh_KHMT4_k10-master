@@ -182,5 +182,10 @@ namespace NguyenThiMinh_KHMT4_k10
 
             }
         }
+
+        private void dgvHSHS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

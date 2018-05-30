@@ -209,6 +209,7 @@
             this.dgvHSHS.Name = "dgvHSHS";
             this.dgvHSHS.Size = new System.Drawing.Size(734, 184);
             this.dgvHSHS.TabIndex = 23;
+            this.dgvHSHS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHSHS_CellContentClick);
             // 
             // dateTimePicker1
             // 
