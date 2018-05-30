@@ -70,5 +70,11 @@ namespace NguyenThiMinh_KHMT4_k10
             CanBoGiaoVien canBoGiaoVien = new CanBoGiaoVien();
             canBoGiaoVien.Show();
         }
+
+        private void toolStripMenuItem22_Click(object sender, EventArgs e)
+        {
+            DanhSachHocSinh danhSachHocSinh = new DanhSachHocSinh();
+            danhSachHocSinh.Show();
+        }
     }
 }

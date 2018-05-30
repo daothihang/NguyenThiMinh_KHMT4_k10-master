@@ -31,39 +31,40 @@ namespace NguyenThiMinh_KHMT4_k10
 
         private void XemDSLop_Load(object sender, EventArgs e)
         {
-            cbXemLop.DataSource = myLopBUL.LayDsLop();
-            cbXemLop.DisplayMember = "TenLop";
-            cbXemLop.ValueMember = "TenLop";
-            dataGridView1.DataSource = myLopBUL.LayDsLop();
+            cbTen.DataSource = myLopBUL.LayDsLop();
+            cbTen.DisplayMember = "TenLop";
+            cbTen.ValueMember = "TenLop";
+            dgvDSLop.DataSource = myLopBUL.LayDsLop();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == textBox1.Text)
+            if (txtMaLop.Text == txtMaLop.Text)
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select MaLop,TenLop,NienKhoa,SiSo,GiaoVienChuNhiem from Lop where  MaLop like '" + textBox1.Text + "%' ", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select MaLop,TenLop,NienKhoa,SiSo,GiaoVienChuNhiem from Lop where  MaLop like '" + txtMaLop.Text + "%' ", conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                dataGridView1.DataSource = dt;
+                dgvDSLop.DataSource = dt;
             }
             else
-                dataGridView1.DataSource = myLopBUL.LayDsLop();
+                dgvDSLop.DataSource = myLopBUL.LayDsLop();
             conn.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (cbXemLop.Text == (string)cbXemLop.SelectedValue)
+            if (cbTen.Text == (string)cbTen.SelectedValue)
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select  MaLop,TenLop,NienKhoa,SiSo,GiaoVienChuNhiem from Lop where  TenLop like '" + cbXemLop.Text + "%' ", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select  MaLop,TenLop,NienKhoa,SiSo,GiaoVienChuNhiem from Lop where  TenLop like '" + cbTen.Text + "%' ", conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                dataGridView1.DataSource = dt;
+                dgvDSLop.DataSource = dt;
             }
             else
-                dataGridView1.DataSource = myLopBUL.LayDsLop();
+                dgvDSLop.DataSource = myLopBUL.LayDsLop();
+            txtMaLop.Clear();
             conn.Close();
         }
     }

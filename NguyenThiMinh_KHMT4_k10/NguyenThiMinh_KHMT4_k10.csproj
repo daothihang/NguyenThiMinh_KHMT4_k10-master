@@ -64,6 +64,12 @@
     <Compile Include="Dangnhap.Designer.cs">
       <DependentUpon>Dangnhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhSachHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachHocSinh.Designer.cs">
+      <DependentUpon>DanhSachHocSinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyHocSinhDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyHocSinhDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyHocSinhDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyMonHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dangnhap.resx">
       <DependentUpon>Dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachHocSinh.resx">
+      <DependentUpon>DanhSachHocSinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
@@ -246,6 +260,17 @@
     </None>
     <None Include="QuanLyHocSinhDataSet2.xss">
       <DependentUpon>QuanLyHocSinhDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyHocSinhDataSet3.xsc">
+      <DependentUpon>QuanLyHocSinhDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyHocSinhDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyHocSinhDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyHocSinhDataSet3.xss">
+      <DependentUpon>QuanLyHocSinhDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

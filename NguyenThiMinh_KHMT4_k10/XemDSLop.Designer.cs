@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XemDSLop));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDSLop = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtMaLop = new System.Windows.Forms.TextBox();
+            this.btnTimMa = new System.Windows.Forms.Button();
+            this.btnTimTen = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbXemLop = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cbTen = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSLop)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvDSLop
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 111);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(351, 150);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvDSLop.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvDSLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSLop.Location = new System.Drawing.Point(12, 111);
+            this.dgvDSLop.Name = "dgvDSLop";
+            this.dgvDSLop.Size = new System.Drawing.Size(351, 150);
+            this.dgvDSLop.TabIndex = 0;
+            this.dgvDSLop.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -59,38 +59,38 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã lớp";
             // 
-            // textBox1
+            // txtMaLop
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtMaLop.Location = new System.Drawing.Point(12, 72);
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.Size = new System.Drawing.Size(146, 20);
+            this.txtMaLop.TabIndex = 2;
             // 
-            // button1
+            // btnTimMa
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(68, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Tìm theo mã";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTimMa.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnTimMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimMa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTimMa.Location = new System.Drawing.Point(68, 22);
+            this.btnTimMa.Name = "btnTimMa";
+            this.btnTimMa.Size = new System.Drawing.Size(90, 29);
+            this.btnTimMa.TabIndex = 3;
+            this.btnTimMa.Text = "Tìm theo mã";
+            this.btnTimMa.UseVisualStyleBackColor = false;
+            this.btnTimMa.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnTimTen
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(288, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 29);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Tìm theo tên";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnTimTen.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnTimTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimTen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTimTen.Location = new System.Drawing.Point(288, 22);
+            this.btnTimTen.Name = "btnTimTen";
+            this.btnTimTen.Size = new System.Drawing.Size(75, 29);
+            this.btnTimTen.TabIndex = 4;
+            this.btnTimTen.Text = "Tìm theo tên";
+            this.btnTimTen.UseVisualStyleBackColor = false;
+            this.btnTimTen.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -102,13 +102,13 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Tên lớp";
             // 
-            // cbXemLop
+            // cbTen
             // 
-            this.cbXemLop.FormattingEnabled = true;
-            this.cbXemLop.Location = new System.Drawing.Point(199, 72);
-            this.cbXemLop.Name = "cbXemLop";
-            this.cbXemLop.Size = new System.Drawing.Size(164, 21);
-            this.cbXemLop.TabIndex = 6;
+            this.cbTen.FormattingEnabled = true;
+            this.cbTen.Location = new System.Drawing.Point(199, 72);
+            this.cbTen.Name = "cbTen";
+            this.cbTen.Size = new System.Drawing.Size(164, 21);
+            this.cbTen.TabIndex = 6;
             // 
             // XemDSLop
             // 
@@ -116,17 +116,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(383, 280);
-            this.Controls.Add(this.cbXemLop);
+            this.Controls.Add(this.cbTen);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnTimTen);
+            this.Controls.Add(this.btnTimMa);
+            this.Controls.Add(this.txtMaLop);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDSLop);
             this.Name = "XemDSLop";
             this.Text = "XemDSLop";
             this.Load += new System.EventHandler(this.XemDSLop_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSLop)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,12 +134,12 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDSLop;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtMaLop;
+        private System.Windows.Forms.Button btnTimMa;
+        private System.Windows.Forms.Button btnTimTen;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbXemLop;
+        private System.Windows.Forms.ComboBox cbTen;
     }
 }
