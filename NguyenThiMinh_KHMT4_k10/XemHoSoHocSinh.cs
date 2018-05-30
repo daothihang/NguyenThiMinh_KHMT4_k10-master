@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BUL;
 using DTO;
 using System.Data.SqlClient;
+using System.Configuration;
 namespace NguyenThiMinh_KHMT4_k10
 {
     public partial class XemHoSoHocSinh : Form
@@ -24,7 +25,7 @@ namespace NguyenThiMinh_KHMT4_k10
             cboMaLop.DataSource = myHSHS.LayDanhSachHoSoHocSinh();
             cboMaLop.DisplayMember = "MaLop";
             cboMaLop.ValueMember = "MaLop";
-            dgvHienThi.DataSource = myHSHS.LayDanhSachHoSoHocSinh();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,34 +35,19 @@ namespace NguyenThiMinh_KHMT4_k10
 
         private void btnTim_Click(object sender, EventArgs e)
         {
-            if(cboMaLop.ValueMember == "")
+            if (cboMaLop.Text == (string)cboMaLop.SelectedValue)
             {
-                dgvHienThi.DataSource = myHSHS.LayDanhSachHoSoHocSinh();
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings
+              ["KETNOIQLHS"].ToString());
+                SqlDataAdapter da = new SqlDataAdapter("select  MaHocSinh, NgaySinh,GioiTinh, DiaChi, DiemVaoTruong, HoTenBoMe, SoDienThoai, MaLop from HoSoHocSinh where MaLop like '" + cboMaLop.Text + "%' ", conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvHT.DataSource = dt;
             }
             else
-            {
-                List<HoSoHocSinhDTO> ds = new List<HoSoHocSinhDTO>();
-             //   KetNoiCoSoDuLieu.MoKetNoi();
-            //    string sqlSELECT = "SELECT MaHocSinh,  HoTen,NgaySinh, GioiTinh, DiaChi, DiemVaoTruong,HoTenBoMe,SoDienThoai, MaLop FROM HoSoHocSinh where MaLop=@MaLop ";
-            //    SqlCommand cmd = new SqlCommand(sqlSELECT, KetNoiCoSoDuLieu.KetNoi);
-           //     SqlDataReader dr = cmd.ExecuteReader();
-           //     while (dr.Read())
-            //    {
-            //        HoSoHocSinhDTO hshs = new HoSoHocSinhDTO(
-           //             dr["MaHocSinh"].ToString(),
-           //             dr["HoTen"].ToString(),
-           //             dr["NgaySinh"].ToString(),
-           //             dr["GioiTinh"].ToString(),
-           //             dr["DiaChi"].ToString(),
-           //             Convert.ToInt32(dr["DiemVaoTruong"]),
-           //             dr["HoTenBoMe"].ToString(),
-            //            dr["SoDienThoai"].ToString(),
-           //             dr["MaLop"].ToString());
-            //        ds.Add(hshs);
-            //    }
-           //     KetNoiCoSoDuLieu.DongKetNoi();
-            //    return ds;
+                dgvHT.DataSource = myHSHS.LayDanhSachHoSoHocSinh();
+
             }
         }
     }
-}
+

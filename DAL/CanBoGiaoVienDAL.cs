@@ -48,18 +48,18 @@ namespace DAL
             KetNoiCoSoDuLieu.DongKetNoi();
             return dt;
         }
-        public bool Them(string MaCanBoGiaoVien, string HoTen, string DiaChi, string SoDienthoai, string TaiKhoan, string MatKhau, string LoaiTaiKhoan)
+        public bool Them(string MaCanBoGiaoVien, string HoTen, string DiaChi, string SoDienThoai, string TaiKhoan, string MatKhau, string LoaiTaiKhoan)
         {
             try
             {
                 List<CanBoGiaoVienDTO> cbgv = new List<CanBoGiaoVienDTO>();
                 KetNoiCoSoDuLieu.MoKetNoi();
-                String sqlInsert = "insert into CanBoGiaoVien values(@MaCanBoGiaoVien, @HoTen, @DiaChi, @SoDienthoai, @TaiKhoan, @MatKhau, @LoaiTaiKhoan)";
+                String sqlInsert = "insert into CanBoGiaoVien values(@MaCanBoGiaoVien, @HoTen, @DiaChi, @SoDienThoai, @TaiKhoan, @MatKhau, @LoaiTaiKhoan)";
                 SqlCommand cmd = new SqlCommand(sqlInsert, KetNoiCoSoDuLieu.KetNoi);
                 cmd.Parameters.AddWithValue("@MaCanBoGiaoVien", SqlDbType.NVarChar).Value = MaCanBoGiaoVien;
                 cmd.Parameters.AddWithValue("@HoTen", SqlDbType.NVarChar).Value = HoTen;
                 cmd.Parameters.AddWithValue("@DiaChi", SqlDbType.NVarChar).Value = DiaChi;
-                cmd.Parameters.AddWithValue("@SoDienthoai", SqlDbType.NVarChar).Value = SoDienthoai;
+                cmd.Parameters.AddWithValue("@SoDienThoai", SqlDbType.NVarChar).Value = SoDienThoai;
                 cmd.Parameters.AddWithValue("@TaiKhoan", SqlDbType.NVarChar).Value = TaiKhoan;             
                 cmd.Parameters.AddWithValue("@MatKhau", SqlDbType.NVarChar).Value = MatKhau;
                 cmd.Parameters.AddWithValue("@LoaiTaiKhoan", SqlDbType.NVarChar).Value = LoaiTaiKhoan;
@@ -76,18 +76,18 @@ namespace DAL
             }
             return false;
         }
-        public bool Sua(string MaCanBoGiaoVien, string HoTen, string DiaChi, string SoDienthoai, string TaiKhoan, string MatKhau, string LoaiTaiKhoan)
+        public bool Sua(string MaCanBoGiaoVien, string HoTen, string DiaChi, string SoDienThoai, string TaiKhoan, string MatKhau, string LoaiTaiKhoan)
         {
             try
             {
                 List<CanBoGiaoVienDTO> cbgv = new List<CanBoGiaoVienDTO>();
                 KetNoiCoSoDuLieu.MoKetNoi();
-                String sqlUpdate = "update  CanBoGiaoVien set  MaCanBoGiaoVien=@MaCanBoGiaoVien, HoTen=@HoTen, DiaChi= @DiaChi, SoDienthoai=@SoDienthoai, TaiKhoan=@TaiKhoan, MatKhau=@MatKhau, LoaiTaihoan=@LoaiTaiKhoan where MaCanBoGiaoVien=@MaCanBoGiaoVien";
+                String sqlUpdate = "update CanBoGiaoVien set  MaCanBoGiaoVien=@MaCanBoGiaoVien, HoTen=@HoTen, DiaChi= @DiaChi, SoDienThoai=@SoDienThoai, TaiKhoan=@TaiKhoan, MatKhau=@MatKhau, LoaiTaiKhoan=@LoaiTaiKhoan where MaCanBoGiaoVien=@MaCanBoGiaoVien";
                 SqlCommand cmd = new SqlCommand(sqlUpdate, KetNoiCoSoDuLieu.KetNoi);
                 cmd.Parameters.AddWithValue("@MaCanBoGiaoVien", SqlDbType.NVarChar).Value = MaCanBoGiaoVien;
                 cmd.Parameters.AddWithValue("@HoTen", SqlDbType.NVarChar).Value = HoTen;
                 cmd.Parameters.AddWithValue("@DiaChi", SqlDbType.NVarChar).Value = DiaChi;
-                cmd.Parameters.AddWithValue("@SoDienthoai", SqlDbType.NVarChar).Value = SoDienthoai;
+                cmd.Parameters.AddWithValue("@SoDienThoai", SqlDbType.NVarChar).Value = SoDienThoai;
                 cmd.Parameters.AddWithValue("@TaiKhoan", SqlDbType.NVarChar).Value = TaiKhoan;
                 cmd.Parameters.AddWithValue("@MatKhau", SqlDbType.NVarChar).Value = MatKhau;
                 cmd.Parameters.AddWithValue("@LoaiTaiKhoan", SqlDbType.NVarChar).Value = LoaiTaiKhoan;
